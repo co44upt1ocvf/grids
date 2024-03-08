@@ -1,0 +1,237 @@
+html{
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(12, 0, 0) 3%, rgb(189, 115, 115) 28%, rgb(128, 40, 40) 68%, rgba(12, 0, 0) 92%);
+    animation: gradient 15s ease infinite;
+    background-size: 350% 350%;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.10em;
+    text-align: justify;
+    color:#ffffff
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+.wave {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0; padding: 0;
+    overflow: hidden;
+}
+.container{
+    display: grid;
+    grid-template-columns: 50px repeat(3, 1fr) 50px;
+    grid-template-rows: 125px repeat(6, auto) 125px;
+    gap: 0px 0px;
+    width: 100%;
+    height: 100%;
+}
+.header{
+    grid-area: 2 / 2 / 3 / 5;
+    width: auto;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    background: rgb(27, 27, 27);
+}
+.LOGO{
+    height: auto;
+    margin: 0.50em 2em;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.zsvh{
+    width: 3.25em;
+    height: 3.25em;
+    border-radius: 3.25em;
+}
+.name_site{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-right: 2.50em;
+    height: 100%;
+    width: auto;
+}
+.name_site p {
+    margin: auto 0.50em;
+    color: #000000;
+    font-size: 1.85em;
+}
+.links{
+    height: auto;
+    margin-left: auto;
+    margin-right: 2.50em;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.vk, .tg{
+    width: 2.25em;
+    height: 2.25em;
+    margin-right: 2.25em;
+}
+.kart{
+    width: 4.50em;
+    height: 2.25em;
+}
+.links_by_contentBox{
+    grid-area: 3 / 2 / 4 / 5;
+    background-color: #ffffff;
+}
+
+.triggers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+.triggers a{
+    margin-left: 1.50em;
+    margin-right: 1.50em;
+}
+a{
+    color:rgb(44, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:link{
+    color:rgb(44, 0, 0);
+}
+a:visited{
+    color:rgb(44, 0, 0);
+}
+a:hover{
+    color: #da3240;
+}
+.backgraund{
+    background: rgb(27, 27, 27);
+    grid-area: 4 / 2 / 5 / 5;
+    overflow: hidden;
+}
+.fresh_content{
+    margin: 4em 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.primary_header{
+    grid-area: 4 / 2 / 5 / 3;
+    margin: 0;
+    margin-right: 0.50em;
+    font-size: 6.25em;
+    text-align: left;
+}
+.actual_news{
+    grid-area: 4 / 3 / 5 / 5;
+    margin-bottom: 0;
+}
+.attention{
+    grid-area: 5 / 2 / 6 / 5;
+	background-color: #da3240;
+    background-size: 100%;
+	width: 100%;
+	height: 6.25em;
+}
+.news{
+    font-size: 5.50em;
+    position: absolute;
+    overflow: hidden;
+    margin-right: 3.1%;
+}
+.theme{
+    font-size: 1.25em;
+}
+.posts{
+    grid-area: 6 / 2 / 7 / 3;
+    margin: 4em 3em;
+    display: flex;
+    flex-direction: column;
+}
+.textBox{
+    grid-area: 6 / 3 / 7 / 4;
+    margin: 4em 3em;
+    display: flex;
+    flex-direction: column;
+}
+.RPG{
+    grid-area: 7 / 2 / 8 / 4;
+    margin: 0em 3em;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4em;
+}
+.photo{
+    aspect-ratio: 9/16;
+    max-width: 90%;
+    height: 100%;
+    border-radius: 3.50em;
+    margin: 4em 0em;
+}
+.photo_pose{
+    grid-area: 6 / 4 / 8 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.back{
+    grid-area: 6 / 2 / 8 / 5;
+    background: rgb(27, 27, 27);
+}
